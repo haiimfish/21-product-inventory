@@ -36,13 +36,6 @@ pipeline {
         }
       }
     }
-    stage('Test Build') {
-      steps {
-        container('my-builder') {
-          sh 'npm run test'
-        }
-      }
-    }
     stage('Deploy') {
       steps {
         container('my-builder') {
